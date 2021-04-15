@@ -14,7 +14,7 @@ app.get('/', passport.authenticate('google', { scope: ['email', 'profile'] }), (
 });
 
 app.get('/callback', passport.authenticate('google', { scope: ['email', 'profile'] }), (req, res) => {
-    return res.send('You are authenticated');
+    return res.send('Congrats');
 });
 
 const port = process.env.PORT || 8000;
